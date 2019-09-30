@@ -25,12 +25,13 @@ let toggleNav = function () {
           item.style.right = "0px"
           item.style.top = "0"
          })
-        getSidebar.style.height = "300px";
+        getSidebar.style.height = "350px";
+        getSidebar.style.width = "70%";
         
 
         toggleNavStatus = true;
     } 
-
+    
     else if (toggleNavStatus === true) {
         getSidebarUL.style.visibility = "hidden";
 
@@ -39,7 +40,8 @@ let toggleNav = function () {
           item.style.top = "-50px"
           item.style.right = "-40px"
          })
-        getSidebar.style.height = "105px";
+        getSidebar.style.height = "110px";
+        getSidebar.style.width = "25%";
 
         toggleNavStatus = false;
     }
