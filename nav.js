@@ -16,6 +16,8 @@ let toggleNav = function () {
     let getSidebarLinks = document.querySelectorAll(".side-nav a");
 
     if (toggleNavStatus === false) {
+        
+        
         getSidebarUL.style.visibility = "visible";
         getSidebar.style.visibility = "visible";
 
@@ -25,8 +27,9 @@ let toggleNav = function () {
           item.style.right = "0px"
           item.style.top = "0"
          })
-        getSidebar.style.height = "350px";
-        getSidebar.style.width = "70%";
+
+         getSidebar.style.width = "70%";
+         getSidebar.style.height = "350px";
         
 
         toggleNavStatus = true;
@@ -40,8 +43,8 @@ let toggleNav = function () {
           item.style.top = "-50px"
           item.style.right = "-40px"
          })
-        getSidebar.style.height = "110px";
-        getSidebar.style.width = "25%";
+        getSidebar.style.height = "100px";
+        getSidebar.style.width = "100px";
 
         toggleNavStatus = false;
     }
