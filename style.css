@@ -40,15 +40,18 @@ h3 {
   margin-left: auto;
   background: rgb(212,255,96);
   border-bottom: 4px solid #fff;
-  background: -moz-linear-gradient(40deg, rgba(212,255,96,1) 0%, rgba(14,179,35,1) 100%);
-  background: -webkit-linear-gradient(40deg, rgba(212,255,96,1) 0%, rgba(14,179,35,1) 100%);
+  background: -o-linear-gradient(50deg, rgba(212,255,96,1) 0%, rgba(14,179,35,1) 100%);
   background: linear-gradient(40deg, rgba(212,255,96,1) 0%, rgba(14,179,35,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d4ff60",endColorstr="#0eb323",GradientType=1);
   border-radius: 0 0 0 100%;
+  -o-transition-property: all;
   transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition-delay: 0;
+  -o-transition-duration: 0.5s;
+     transition-duration: 0.5s;
+  -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition-delay: 0;
+     transition-delay: 0;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.5s;
   -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -80,9 +83,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Buttons */
 .button-solid {
-  background: background: rgb(183,255,90);
-  background: -moz-linear-gradient(135deg, rgba(183,255,90,1) 10%, rgba(17,181,36,1) 100%);
-  background: -webkit-linear-gradient(135deg, rgba(183,255,90,1) 10%, rgba(17,181,36,1) 100%);
+  background: rgb(183,255,90);
+  background: -o-linear-gradient(315deg, rgba(183,255,90,1) 10%, rgba(17,181,36,1) 100%);
   background: linear-gradient(135deg, rgba(183,255,90,1) 10%, rgba(17,181,36,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b7ff5a",endColorstr="#11b524",GradientType=1);;
   border-radius: 50px;
@@ -95,12 +97,16 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0 30px;
   font-size: 13px;
   width: auto;
+  -webkit-transition: background-color .5s ease;
+  -o-transition: background-color .5s ease;
   transition: background-color .5s ease;
 }
 
 .button-solid:hover {
   background: #fff;
   color: rgba(17,181,36,1);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
   transition: .5s;
 }
 
@@ -115,7 +121,8 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 6px 30px;
     color: #FFFFFF;
     text-decoration: none;
-    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
     border-radius: 50px;
     white-space: nowrap;
     float: left;
@@ -156,6 +163,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-hover.color-5 {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(17,181,36,1)), color-stop(rgba(183,255,90,1)), color-stop(#fff),to(#fff));
+    background-image: -o-linear-gradient(left, rgba(17,181,36,1), rgba(183,255,90,1), #fff,#fff);
     background-image: linear-gradient(to right, rgba(17,181,36,1), rgba(183,255,90,1), #fff,#fff);
 } 
 
@@ -165,18 +174,34 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .navbar {
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
 }
 
 /* logo and hamburger container */
 .mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   height: 80px;
   background: transparent;
@@ -215,6 +240,8 @@ p, h1, h2, h3, h4, h5, h6 {
   width:100%;
   background: #fff;
   border-radius:1.5px;
+  -webkit-transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+  -o-transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
   transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
 }
 
@@ -231,12 +258,16 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .menu.close .line01 {
-  transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+      -ms-transform:rotate(45deg);
+          transform:rotate(45deg);
   top:49%;
 }
 
 .menu.close .line02, .menu.close .line03 {
-  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+      -ms-transform:rotate(-45deg);
+          transform:rotate(-45deg);
   top:49%;
 }
 
@@ -250,6 +281,8 @@ p, h1, h2, h3, h4, h5, h6 {
 .side-nav {
   visibility: hidden;
   height: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s 
 }
 
@@ -272,6 +305,8 @@ ul a {
   color: #fff;
   line-height: 2em;
   font-weight: 700;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   position: relative;
   right: -40px;
@@ -279,18 +314,30 @@ ul a {
 }
 
 .delay-2 {
-  transition-delay: 50ms;
-  transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+  -webkit-transition-delay: 50ms;
+       -o-transition-delay: 50ms;
+          transition-delay: 50ms;
+  -webkit-transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+       -o-transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+          transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
 }
 
 .delay-3 {
-  transition-delay: 100ms;
-  transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+  -webkit-transition-delay: 100ms;
+       -o-transition-delay: 100ms;
+          transition-delay: 100ms;
+  -webkit-transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+       -o-transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+          transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
 }
 
 .delay-4 {
-  transition-delay: 150ms;
-  transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+  -webkit-transition-delay: 150ms;
+       -o-transition-delay: 150ms;
+          transition-delay: 150ms;
+  -webkit-transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+       -o-transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
+          transition-delay: cubic-bezier(0.42, 0, 0.34, 1.75);
 }
 
 ul li {
@@ -373,8 +420,7 @@ nav {
 
 .hero-line {
   background: rgb(62,196,77);
-  background: -moz-linear-gradient(135deg, rgba(62,196,77,1) 10%, rgba(183,255,90,1) 100%);
-  background: -webkit-linear-gradient(135deg, rgba(62,196,77,1) 10%, rgba(183,255,90,1) 100%);
+  background: -o-linear-gradient(315deg, rgba(62,196,77,1) 10%, rgba(183,255,90,1) 100%);
   background: linear-gradient(135deg, rgba(62,196,77,1) 10%, rgba(183,255,90,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3ec44d",endColorstr="#b7ff5a",GradientType=1);
   height: 4px;
@@ -427,10 +473,15 @@ button.quote-button {
     display: inline-block;
     width: 200px;
     height: 500px;
+    background: -webkit-gradient(linear, left top, right bottom, from(#309900), to(#005600));
+    background: -o-linear-gradient(top left, #309900, #005600);
     background: linear-gradient(to bottom right, #309900, #005600);
-    transform: skew(20deg);
+    -webkit-transform: skew(20deg);
+        -ms-transform: skew(20deg);
+            transform: skew(20deg);
     border-radius: 5% 40% 70%;
-    box-shadow: inset 0px 0px 1px #222;
+    -webkit-box-shadow: inset 0px 0px 1px #222;
+            box-shadow: inset 0px 0px 1px #222;
     border: 1px solid #333;
     z-index: 1;
     -webkit-animation: falling 5s 0s infinite;
@@ -446,12 +497,16 @@ button.quote-button {
   right: 9px;
   height: 27px;
   width: 32px;
-  transform: rotate(49deg);
+  -webkit-transform: rotate(49deg);
+      -ms-transform: rotate(49deg);
+          transform: rotate(49deg);
   border-radius: 0% 15% 15% 0%;
   border-top: 1px solid #222;
   border-bottom: 1px solid #222;
   border-left: 0px solid #222;
   border-right: 1px solid #222;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0,100,0,1)), to(#005600));
+  background: -o-linear-gradient(left, rgba(0,100,0,1), #005600);
   background: linear-gradient(to right, rgba(0,100,0,1), #005600);
   z-index: 1;
 }
@@ -460,9 +515,13 @@ button.quote-button {
   content: '';
   height: 125px;
   width: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,.15)), to(rgba(0,0,0,0)));
+  background: -o-linear-gradient(left, rgba(0,0,0,.15), rgba(0,0,0,0));
   background: linear-gradient(to right, rgba(0,0,0,.15), rgba(0,0,0,0));
   display: block;
-  transform: rotate(125deg);
+  -webkit-transform: rotate(125deg);
+      -ms-transform: rotate(125deg);
+          transform: rotate(125deg);
   position: absolute;
   left: 85px;
   border-radius:50%;
@@ -497,15 +556,15 @@ button.quote-button {
 #leaves i:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
 #leaves i:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
 
-#leaves i:nth-of-type(n)    { background: linear-gradient(to bottom right, #309900, rgba(183,255,90,1)); }
-#leaves i:nth-of-type(2n+2)  { background: linear-gradient(to bottom right, #0eb323, rgba(183,255,90,1)); }
-#leaves i:nth-of-type(4n+1)  { background: linear-gradient(to bottom right, rgba(183,255,90,1),  #0eb323); }
+#leaves i:nth-of-type(n)    { background: -webkit-gradient(linear, left top, right bottom, from(#309900), to(rgba(183,255,90,1))); background: -o-linear-gradient(top left, #309900, rgba(183,255,90,1)); background: linear-gradient(to bottom right, #309900, rgba(183,255,90,1)); }
+#leaves i:nth-of-type(2n+2)  { background: -webkit-gradient(linear, left top, right bottom, from(#0eb323), to(rgba(183,255,90,1))); background: -o-linear-gradient(top left, #0eb323, rgba(183,255,90,1)); background: linear-gradient(to bottom right, #0eb323, rgba(183,255,90,1)); }
+#leaves i:nth-of-type(4n+1)  { background: -webkit-gradient(linear, left top, right bottom, from(rgba(183,255,90,1)),  to(#0eb323)); background: -o-linear-gradient(top left, rgba(183,255,90,1),  #0eb323); background: linear-gradient(to bottom right, rgba(183,255,90,1),  #0eb323); }
 
 #leaves i:nth-of-type(n)    { opacity: .7;}
 #leaves i:nth-of-type(3n+1)  { opacity: .5;}
 #leaves i:nth-of-type(3n+2)  { opacity: .5;}
 
-#leaves i:nth-of-type(n)    {transform: rotate(180deg);}
+#leaves i:nth-of-type(n)    {-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);}
 
 
 #leaves i:nth-of-type(n) { -webkit-animation-timing-function:ease-in-out;}
@@ -575,11 +634,17 @@ button.quote-button {
   margin: 50px auto;
   border-radius: 8px;
   -webkit-box-shadow: -5px 7px 20px -10px rgba(0,0,0,0.51);
-  -moz-box-shadow: -5px 7px 20px -10px rgba(0,0,0,0.51);
   box-shadow: -5px 7px 20px -10px rgba(0,0,0,0.51);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card svg {
@@ -616,9 +681,16 @@ button.quote-button {
 #about {
   position: relative;
   height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(211,211,211,.2);
 }
 
@@ -634,9 +706,16 @@ button.quote-button {
 }
 
 .about-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about-left img {
@@ -650,11 +729,17 @@ button.quote-button {
   margin: 0px auto 80px auto;
   border-radius: 8px;
   -webkit-box-shadow: -5px 7px 20px -10px rgba(0,0,0,0.51);
-  -moz-box-shadow: -5px 7px 20px -10px rgba(0,0,0,0.51);
   box-shadow: -5px 7px 20px -10px rgba(0,0,0,0.51);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 40px 20px !important;
   background-color: #fff;
 }
@@ -698,7 +783,6 @@ button.quote-button {
 .project-card {
   border-radius: 8px !important;
   -webkit-box-shadow: 0px 3px 7px -3px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 3px 7px -3px rgba(0,0,0,0.75);
   box-shadow: 0px 3px 7px -3px rgba(0,0,0,0.75);
   height: auto;
   margin-bottom: 50px;
@@ -715,7 +799,8 @@ button.quote-button {
 .img-box {
   width: 100%;
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .img-box svg {
@@ -723,7 +808,8 @@ button.quote-button {
   bottom: -1px;
   width: 100%;
   z-index: 100;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .path {
@@ -815,10 +901,19 @@ button.quote-button {
 }
 
 .client {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -837,7 +932,6 @@ button.quote-button {
   width: 70px;
   border-radius: 50%;
   -webkit-box-shadow: -1px 0px 11px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 0px 11px -1px rgba(0,0,0,0.75);
   box-shadow: -1px 0px 11px -1px rgba(0,0,0,0.75);
   margin: 25px 0;
 }
@@ -880,8 +974,7 @@ button.quote-button {
 
 .form-dark {
   background: rgb(116,233,38);
-  background: -moz-linear-gradient(140deg, rgba(116,233,38,1) 0%, rgba(0,255,246,1) 100%);
-  background: -webkit-linear-gradient(140deg, rgba(116,233,38,1) 0%, rgba(0,255,246,1) 100%);
+  background: -o-linear-gradient(310deg, rgba(116,233,38,1) 0%, rgba(0,255,246,1) 100%);
   background: linear-gradient(140deg, rgba(116,233,38,1) 0%, rgba(0,255,246,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#74e926",endColorstr="#00fff6",GradientType=1);
   opacity: .8;
@@ -942,7 +1035,7 @@ form p{
 
 #contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
   -webkit-transition:border-color 0.3s ease-in-out;
-  -moz-transition:border-color 0.3s ease-in-out;
+  -o-transition:border-color 0.3s ease-in-out;
   transition:border-color 0.3s ease-in-out;
   border:1px solid #AAA;
 }
@@ -968,11 +1061,12 @@ form p{
 #contact button[type="submit"]:hover {
   opacity: .6;
   -webkit-transition:background 0.3s ease-in-out;
-  -moz-transition:background 0.3s ease-in-out;
+  -webkit-transition:background-color 0.3s ease-in-out;
+  -o-transition:background-color 0.3s ease-in-out;
   transition:background-color 0.3s ease-in-out;
 }
 
-#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+#contact button[type="submit"]:active { -webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
 
 #contact input:focus, #contact textarea:focus {
   outline:0;
@@ -1146,9 +1240,16 @@ ul {
     }
 
     .heroText {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         padding: 0;
         height: auto;
         width: 600px;
@@ -1174,8 +1275,13 @@ ul {
     }
 
     .flex-button {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
 
     .btn-hover {
@@ -1201,10 +1307,18 @@ ul {
     }
     
     .cards {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       height: 1050px;
     }
 
@@ -1231,10 +1345,19 @@ ul {
     }
 
     .card-group.container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       width: 600px;
       bottom: -30px;
     }
@@ -1261,10 +1384,18 @@ ul {
     }
 
     .project-groups {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
     }
 
     .project-card {
@@ -1304,11 +1435,20 @@ ul {
     <--- -------------------------- -*/
 
     .footer-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         max-width: 550px;
         margin: auto;
     }
@@ -1392,23 +1532,41 @@ ul {
     background: rgb(62,196,77);
     width: 100%;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .topper-flex {
     background: transparent;
     width: 100%;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .topper-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
   .topper-content i {
@@ -1425,10 +1583,19 @@ ul {
 
   /* Branding Bar */
   .brand-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 130px;
     width: auto;
     position: relative;
@@ -1449,9 +1616,16 @@ ul {
 
   .branding-bar {
     width: 500px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding:  0;
     margin: 0 !important;
   }
@@ -1459,24 +1633,41 @@ ul {
   .quote i {
     color: rgba(62,196,77,1);
     font-size: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: 25px;
   }
 
   .call i {
     color: rgba(62,196,77,1);
     font-size: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: 25px;
   }
 
   .quote {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: auto;
   }
 
@@ -1489,10 +1680,19 @@ ul {
   }
 
   .call {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: auto;
   }
 
@@ -1525,8 +1725,12 @@ ul {
   }
 
   ul.navbar-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     float: left !important;
     padding: 0;
     height: 59px;
@@ -1605,7 +1809,6 @@ ul {
     #home-p {
         width: 600px;
         margin: 15px 0;
-        font
     }
 
     .btn-hover {
@@ -1625,10 +1828,17 @@ ul {
     }
 
     .cards {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
       height: auto;
       position: relative;
       top: -200px;
@@ -1644,7 +1854,9 @@ ul {
     }
 
     .middle-card {
-      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
     }
 
     /*-- -------------------------- -->
@@ -1652,13 +1864,22 @@ ul {
     <--- -------------------------- -*/
 
     .card-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
       height: 650px !important;
       width: 980px;
       max-width: 980px !important;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       top: 0;
       margin: 0;
     }
@@ -1698,10 +1919,17 @@ ul {
     <--- -------------------------- -*/
 
     .project-groups {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
     }
 
     .project-card {
@@ -1734,9 +1962,16 @@ ul {
     }
 
     .footer-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .footer-item img {
